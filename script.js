@@ -1,5 +1,8 @@
 // Get pre-computed histogram data
-d3.json("data.json", function(json) {
+
+	
+var initHistogram=function(json,tag) 
+{
 	
 	
 	var binInc = json[0].data[1].bin;
@@ -35,7 +38,7 @@ d3.json("data.json", function(json) {
 	}
 	
 	// add the histogram
-	initial = createHistogram(data, maxBin+binInc, binInc, group);
+	initial = createHistogram(tag,data, maxBin+binInc, binInc, group);
 	transitionTo(json,initial,1);
 	// console.log(initial.height)
 });
@@ -69,7 +72,7 @@ var transitionTo = function(json,initial,i){
             .each("end",function(){setTimeout(function(){transitionTo(json,initial,(i+1)%json.length)},100)});
 }
 
-var createHistogram = function(data, maxBin, binInc, title) {
+var createHistogram = function(tag,data, maxBin, binInc, title) {
 
 	// A formatter for counts.
 	var formatCount = d3.format(",.0f");
@@ -106,7 +109,7 @@ var createHistogram = function(data, maxBin, binInc, title) {
 			.scale(y)
 			.orient("left");
 	
-	var svg = d3.select("#d3div").append("svg")
+	var svg = d3.select(tag).append("svg")
 			.attr("width", width + margin.left + margin.right)
 			.attr("height", height + margin.top + margin.bottom)
 			.append("g")
@@ -174,3 +177,5 @@ var createHistogram = function(data, maxBin, binInc, title) {
 			.text(title);  
 	return {x:x, xaxis :xAxis,y:y,yaxis:yAxis,bar:bar,title:titleText,height:height,width:width,svg:svg}
 };
+
+d3.json("data.json", function(x){initHistogram(x,"#d3div");});
