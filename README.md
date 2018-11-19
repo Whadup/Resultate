@@ -6,6 +6,7 @@ I have prepared a visualization that shows how the eigenvalues of a convolution 
 
 The first histogram shows a 3x3 linear convolution layer that maps from 8,112 features to 32,448 features.
 The second histrogram shows a a 3x3 linear convolution layer that maps from 10,816 features to 43,264 features.
+The eigenvalues show heavy-tail behavior.
 
 <link rel="stylesheet" href="https://whadup.github.io/Resultate/style.css">
 <script src="https://d3js.org/d3.v3.min.js" ></script>
