@@ -73,7 +73,7 @@ var createHistogram = function(data, maxBin, binInc, title) {
 
 	// A formatter for counts.
 	var formatCount = d3.format(",.0f");
-	var totalWidth = 1000;
+	var totalWidth = width = $("#d3div").width();
 	var totalHeight = 600;
 	var margin = {top: 40, right: 60, bottom: 50, left: 70},
 			width = totalWidth - margin.left - margin.right,
