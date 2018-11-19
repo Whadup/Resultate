@@ -2,6 +2,10 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size:10pt;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 .bar {
