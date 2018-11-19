@@ -1,7 +1,7 @@
 // Get pre-computed histogram data
 
 	
-var initHistogram=function(json,tag) 
+function initHistogram(json,tag) 
 {
 	
 	
