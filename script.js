@@ -41,7 +41,7 @@ function initHistogram(json,tag)
 	initial = createHistogram(tag,data, maxBin+binInc, binInc, group);
 	transitionTo(json,initial,1);
 	// console.log(initial.height)
-});
+}
 
 var transitionTo = function(json,initial,i){
 	speed = 500
