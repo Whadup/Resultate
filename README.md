@@ -7,4 +7,8 @@ I have prepared a visualization that shows how the eigenvalues of a convolution 
 <script src="https://d3js.org/d3.v3.min.js" ></script>
 
 <script src="https://whadup.github.io/Resultate/script.js"> </script>
-<div id='d3div'></div>
+<div id='d3div38'></div>
+<script>d3.json("data38.json", function(x){initHistogram(x,"#d3div38");});</script>
+
+<div id='d3div59'></div>
+<script>d3.json("data59.json", function(x){initHistogram(x,"#d3div59");});</script>
