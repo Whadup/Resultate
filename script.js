@@ -178,4 +178,4 @@ var createHistogram = function(tag,data, maxBin, binInc, title) {
 	return {x:x, xaxis :xAxis,y:y,yaxis:yAxis,bar:bar,title:titleText,height:height,width:width,svg:svg}
 };
 
-d3.json("data.json", function(x){initHistogram(x,"#d3div");});
+
