@@ -7,7 +7,7 @@ function initHistogram(json,tag)
 	
 	var binInc = json[0].data[1].bin;
 	var maxBin = json[0].data[json[0].data.length-1].bin;
-	console.log(maxBin,binInc);
+	//console.log(maxBin,binInc);
 	var i = 0;
 		
 	// use the name of the group to initialize the array
@@ -51,17 +51,13 @@ var transitionTo = function(json,initial,i){
 	initial.x.domain([0, maxBin + binInc]);
 			// .range([0, initial.width]);
 
-	console.log(d3.max(json[i].data,function(d){return d.count}));
+	//console.log(d3.max(json[i].data,function(d){return d.count}));
 	initial.y.domain([0,d3.max(json[i].data,function(d){return d.count})]);
 
 	initial.bar.transition().duration(speed)
 			.attr("height",function(d){return 2*(json[i].data[d.i].count>0)+initial.height - initial.y(json[i].data[d.i].count)})
 			.attr("y",function(d){return -2*(json[i].data[d.i].count>0)+initial.y(json[i].data[d.i].count)});
 
-	var binTicks = [];
-	for (var k = 0; k <= maxBin + binInc; k += binInc) {
-		binTicks.push(k);
-	}
 	initial.title.transition().duration(speed).text(json[i].name);
 	initial.svg.select(".y")
 			.transition().duration(speed)
