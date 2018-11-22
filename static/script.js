@@ -57,7 +57,21 @@ var transitionTo = function(json,initial,i){
 	initial.bar.transition().duration(speed)
 			.attr("height",function(d){return 2*(json[i].data[d.i].count>0)+initial.height - initial.y(json[i].data[d.i].count)})
 			.attr("y",function(d){return -2*(json[i].data[d.i].count>0)+initial.y(json[i].data[d.i].count)});
-
+	initial.bar.on("mouseover", function(d) {
+				var barWidth = parseFloat(d3.select(this).attr("width"));
+				var xPosition = parseFloat(d3.select(this).attr("x")) + (barWidth / 2);
+				var yPosition = parseFloat(d3.select(this).attr("y")) - 10;
+				
+				svg.append("text")
+					.attr("id", "tooltip")
+					.attr("x", xPosition)
+					.attr("y", yPosition)
+					.attr("text-anchor", "middle")
+					.text(json[i].data[d.i].count);
+			})
+			.on("mouseout", function(d) {
+				d3.select('#tooltip').remove();
+			});
 	initial.title.transition().duration(speed).text(json[i].name);
 	initial.svg.select(".y")
 			.transition().duration(speed)
