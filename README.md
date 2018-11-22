@@ -8,10 +8,10 @@ Overall, the eigenvalues show heavy-tail behavior.
 
 
 
-<link rel="stylesheet" href="https://whadup.github.io/Resultate/style.css">
+<link rel="stylesheet" href="/static/style.css">
 <script src="https://d3js.org/d3.v3.min.js" ></script>
 
-<script src="https://whadup.github.io/Resultate/script.js"> </script>
+<script src="/static/script.js"> </script>
 
 ### Layer 38
 
