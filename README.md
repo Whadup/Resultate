@@ -17,10 +17,10 @@ Overall, the eigenvalues show heavy-tail behavior.
 
 The first histogram shows a 3x3 linear convolution layer that maps from 8,112 features to 32,448 features.
 <div id='d3div38'></div>
-<script>d3.json("data38.json", function(x){initHistogram(x,"#d3div38");});</script>
+<script>d3.json("data/data38.json", function(x){initHistogram(x,"#d3div38");});</script>
 
 ### Layer 59
 
 The second histrogram shows a a 3x3 linear convolution layer that maps from 10,816 features to 43,264 features.
 <div id='d3div59'></div>
-<script>d3.json("data59.json", function(x){initHistogram(x,"#d3div59");});</script>
+<script>d3.json("data/data59.json", function(x){initHistogram(x,"#d3div59");});</script>
