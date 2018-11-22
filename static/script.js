@@ -62,7 +62,7 @@ var transitionTo = function(json,initial,i){
 				var xPosition = parseFloat(d3.select(this).attr("x")) + (barWidth / 2);
 				var yPosition = parseFloat(d3.select(this).attr("y")) - 10;
 				
-				svg.append("text")
+				initial.svg.append("text")
 					.attr("id", "tooltip")
 					.attr("x", xPosition)
 					.attr("y", yPosition)
