@@ -27,13 +27,13 @@ The second histrogram shows a a 3x3 linear convolution layer that maps from 10,8
 
 ### All 3x3 Convolution Layers
 
-- [Layer 8](layer8/)
-- [Layer 15](layer15/)
-- [Layer 30](layer30/)
-- [Layer 38](layer38/)
-- [Layer 45](layer45/)
-- [Layer 52](layer52/)
-- [Layer 59](layer59/)
+- [Layer 8](layer8)
+- [Layer 15](layer15)
+- [Layer 30](layer30)
+- [Layer 38](layer38)
+- [Layer 45](layer45)
+- [Layer 52](layer52)
+- [Layer 59](layer59)
 
 
 ### What about the other layers?
