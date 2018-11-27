@@ -103,7 +103,7 @@ var createHistogram = function(tag,data, maxBin, binInc, minBin, title) {
 	}
 	
 	var x = d3.scale.linear()
-			.domain([0, maxBin + binInc])
+			.domain([minBin, maxBin + binInc])
 			.range([2, width]);
 	var binWidth = parseFloat(width / (binArray.length - 1));
 	
