@@ -6,7 +6,7 @@ function initHistogram(json,tag)
 	
 	
 	var binInc = json[0].data[1].bin;
-	var maxBin = json[0].data[json[i].data.length-1].bin;
+	var maxBin = json[0].data[json[0].data.length-1].bin;
 	var binInc = json[0].data[1].bin-json[0].data[0].bin;
 	//console.log(maxBin,binInc);
 	var i = 0;
