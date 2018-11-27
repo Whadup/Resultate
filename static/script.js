@@ -114,7 +114,7 @@ var createHistogram = function(tag,data, maxBin, binInc, minBin, title) {
 	var xAxis = d3.svg.axis()
 			.scale(x)
 			.orient("bottom")
-			.tickFormat(d3.format(",.2f"));
+			.tickFormat(d3.format(",.2f"))
 			.tickValues(binTicks);
 			
 	var yAxis = d3.svg.axis()
