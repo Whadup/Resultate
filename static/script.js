@@ -4,7 +4,7 @@
 function initHistogram(json,tag) 
 {
 	
-	
+	var minBin = json[i].data[0].bin;
 	var binInc = json[0].data[1].bin;
 	var maxBin = json[0].data[json[0].data.length-1].bin;
 	var binInc = json[0].data[1].bin-json[0].data[0].bin;
@@ -39,7 +39,7 @@ function initHistogram(json,tag)
 	}
 	
 	// add the histogram
-	initial = createHistogram(tag,data, maxBin+binInc, binInc, group);
+	initial = createHistogram(tag,data, maxBin+binInc, binInc, minBin, group);
 	transitionTo(json,initial,1);
 	// console.log(initial.height)
 }
@@ -49,7 +49,7 @@ var transitionTo = function(json,initial,i){
 	var minBin = json[i].data[0].bin;
 	var maxBin = json[i].data[json[i].data.length-1].bin;
 	var binInc = json[i].data[1].bin-json[i].data[0].bin;
-	initial.x.domain([0, maxBin + binInc]);
+	initial.x.domain([minBin, maxBin + binInc]);
 			// .range([0, initial.width]);
 
 	//console.log(d3.max(json[i].data,function(d){return d.count}));
@@ -83,7 +83,7 @@ var transitionTo = function(json,initial,i){
             .each("end",function(){setTimeout(function(){transitionTo(json,initial,(i+1)%json.length)},100)});
 }
 
-var createHistogram = function(tag,data, maxBin, binInc, title) {
+var createHistogram = function(tag,data, maxBin, binInc, minBin, title) {
 
 	// A formatter for counts.
 	var formatCount = d3.format(",.0f");
